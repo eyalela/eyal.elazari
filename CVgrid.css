@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    color: rgb(37, 87, 153);
+    }
+body{
+    background-color:rgb(243, 229, 229) ;
+}
+.grid-templates{ /*the name of wrapper*/
+  display:grid; /*must-for change the wrapper to grid*/
+  justify-content:space-evenly ;/* for  spaces beyween the boxes*/
+  grid-template-columns:100px 100px 100px 100px  ;
+  grid-template-rows:100px 100px 100px 100px;
+  grid-gap:10px; /*spaces btween boxes*/
+ padding:10px;/*spaces between the ages*/
+ grid-template-areas:
+ 'header header header header' 
+ 'footer footer footer footer'
+ 'side side main main'
+ 'side side main main';
+ 
+}
+.Head1{
+    /*give a name to the item*/
+    grid-area:header;background-color: rgb(108, 150, 192);
+}
+.Head2{
+    grid-area:side;background-color: rgb(76, 122, 150);
+}
+.Head3{
+    grid-area:main;background-color: rgb(56, 100, 98);
+}
+.Head4{
+    grid-area:footer;background-color: rgb(116, 40, 11);
+}
+
+@media (max-width: 768px) {
+    body{
+        background-color:rgb(31, 95, 124) ;
+    }
+    .grid-templates{
+    background: rgb(32, 155, 108);
+    grid-template-areas:
+    'header header header header' 
+    'side side main main'
+    'side side main main'
+    'footer footer footer footer';
+    grid-template-rows: 50px 30px 1fr 60px 30px;
+    }
+}
