@@ -2,9 +2,29 @@ h1 {
     text-align: center;
     color: rgb(37, 87, 153);
     }
-body{
-    background-color:rgb(243, 229, 229) ;
-}
+    body{
+        width: 100%;
+        height: 100%;
+        animation: pulse 5s infinite; ;
+    }
+    @keyframes pulse {
+        0% {
+          background-color: #003f00;
+        }
+        100% {
+          background-color: #b3555a;
+        }
+      }
+    button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin: auto;
+        width: 50%;
+        border: 3px solid rgb(124, 0, 128);
+        padding: 10px;
+    }
 .grid-templates{ /*the name of wrapper*/
   display:grid; /*must-for change the wrapper to grid*/
   justify-content:space-evenly ;/* for  spaces beyween the boxes*/
